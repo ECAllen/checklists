@@ -33,8 +33,10 @@ Estimate Resources
 
 Ch3
 2. Data Engineering
+Understand the data
 Pick the right data model for you needs. Realtional model, document model, graph database etc...
 Decide on structured vs. unstructured data
+
 Ch4
 Decide on sampling method
 Common choices
@@ -59,6 +61,25 @@ Labeling methods
     semi-supervision
     transfer learning
     active learning
+
+Class Imbalances
+  data-distribution
+    evaluate the ROC curve for the positive class
+    evaluate the precision-recall curve for the negative class
+  data level
+    resampling - oversampling, undersampling
+  algoritmic level
+    tuning the loss function
+      cost-sensitive learning
+      class-balanced loss
+      focal loss
+
+data augmentation
+  label-preserving transformations
+  data synthesis
+
+Ch5
+Feature engineerung
 
 3. ML model development
 feature engineering

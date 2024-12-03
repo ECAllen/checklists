@@ -34,6 +34,7 @@ Estimate Resources
 Ch3
 2. Data Engineering
 Understand the data
+  check for skewed distribution
 Pick the right data model for you needs. Realtional model, document model, graph database etc...
 Decide on structured vs. unstructured data
 
@@ -79,9 +80,50 @@ data augmentation
   data synthesis
 
 Ch5
-Feature engineerung
+Feature Engineering
+  Handle missing values
+  Identify the type of missing values
+    missing completely at random MCAR
+    missing at random MAR
+    missing not at random MNAR
+  Dealing with missing values
+    remove the rows
+    remove the columns
+    impute the missing values
+      use a default, ex. ""
+      use mean, median, mode
+  Feature Scaling
+    check for skewed distribution
+      apply log transformation
+    verify did not introduce data leakage by scaling
+  Encoding Categorical Features
+    check whether categories have changed over time
+    check whether categories are added
+      if so use the "hashing trick"
+  Feature Crossing combine features to create new features
+  Data leakage
+    check for the following:
+      do you understand how the data was generated?
+      if the data is time-correlated, was it split by time
+      scaling before splitting
+      remove duplicates before splitting
+      group leakage
+    detecting data leakage
+      measure the predictive power of each feature against a label
+      determine how many features are correlated with the label
+        do an ablation study
+      if new feature imroves the model then check that there is not data leakage
+  Measure feature importance
+    SHAP
+  Feature Generalization
+   Generally want to look at two things
+      feature coverage
+      distribution of feature values
+        is it in both your training and test sets
 
 3. ML model development
+Ch6
+
 feature engineering
 model selection
 model training

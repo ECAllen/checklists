@@ -122,13 +122,22 @@ Feature Engineering
         is it in both your training and test sets
 
 3. ML model development
-Ch6
 
-feature engineering
-model selection
-model training
-model evaluation
+Ch6 Model Development and Offline Evaluation
 
+Model Evaluation
+  common models for text classification include naive Bayes, logistic regression, recurrent neural networks, and transformer-based models such as BERT, GPT, and their variants.
+  fraudulent transactions are abnormalities that you want to detect—and common algorithms for this problem are many, including k-nearest neighbors, isolation forest, clustering, and neural networks.
+ it’s important to consider not only the model’s performance, measured by metrics such as accuracy, F1 score, and log loss, but also its other properties, such as how much data, compute, and time it needs to train, what’s its inference latency, and interpretability.
+
+6 tips for model selection
+
+avoid the state-of-the-art trap
+start with the simplest model
+avoid human biases in selecting models
+evaluate good performance now vs good performance later
+  use learning curves to evaluate how your model might perform with more data
+evaluate trade-offs
 4. Deployment
 
 5. Monitoring and continual learning

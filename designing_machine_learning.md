@@ -1,126 +1,122 @@
-# AI! please format this markdown file so it diplays nicely
-Desiging Machine Learning Systems by Chip Huyen
+# Designing Machine Learning Systems by Chip Huyen
 
-Checklist
-Ch2
-Understand the business objectives
-Identify business metrics
+## Checklist
+### Ch2
+- Understand the business objectives
+- Identify business metrics
 
-Four characteristics ML systems:
+### Four characteristics of ML systems:
 
 - Reliability
-
 - Scalability
-
 - Maintainability
-
 - Adaptability
 
-ML Developement Cycle
+### ML Development Cycle
 
 1. Project Scoping
-2. Data Enineering
+2. Data Engineering
 3. ML model development
 4. Deployment
-5. Monitoring and continuoul learning
+5. Monitoring and continuous learning
 6. Business Analysis
 
-1. Project Scoping
-Is the problem you are trying to solve even a ML problem? Can it be framed as a ML problem?
-Identify goals and objectives
-Classification or regression?
-Identify stakeholders
-Estimate Resources
+### 1. Project Scoping
+- Is the problem you are trying to solve even a ML problem? Can it be framed as a ML problem?
+- Identify goals and objectives
+- Classification or regression?
+- Identify stakeholders
+- Estimate Resources
 
-Ch3
-2. Data Engineering
-Understand the data
-  check for skewed distribution
-Pick the right data model for you needs. Realtional model, document model, graph database etc...
-Decide on structured vs. unstructured data
+### Ch3
+#### 2. Data Engineering
+- Understand the data
+  - Check for skewed distribution
+- Pick the right data model for your needs: Relational model, document model, graph database etc.
+- Decide on structured vs. unstructured data
 
-Ch4
-Decide on sampling method
-Common choices
-non-probabilty sampling - should not use unless you have to, high probability of selection bias
-  convience sampling
-  snowball sampling
-  judgement sampling
-  quota sampling
+### Ch4
+#### Decide on sampling method
+Common choices:
+- Non-probability sampling - should not use unless you have to, high probability of selection bias
+  - Convenience sampling
+  - Snowball sampling
+  - Judgment sampling
+  - Quota sampling
 
-random sampling
-  simple random sampling
-  stratified random sampling
-  weighted sampling
-  reservoir sampling
-  importance sampling
+- Random sampling
+  - Simple random sampling
+  - Stratified random sampling
+  - Weighted sampling
+  - Reservoir sampling
+  - Importance sampling
 
-Labeling methods
-  hand labels  
-  natural labels
-  lack of labels
-    weak supervision
-    semi-supervision
-    transfer learning
-    active learning
+#### Labeling methods
+- Hand labels  
+- Natural labels
+- Lack of labels
+  - Weak supervision
+  - Semi-supervision
+  - Transfer learning
+  - Active learning
 
-Class Imbalances
-  data-distribution
-    evaluate the ROC curve for the positive class
-    evaluate the precision-recall curve for the negative class
-  data level
-    resampling - oversampling, undersampling
-  algoritmic level
-    tuning the loss function
-      cost-sensitive learning
-      class-balanced loss
-      focal loss
+#### Class Imbalances
+- Data-distribution
+  - Evaluate the ROC curve for the positive class
+  - Evaluate the precision-recall curve for the negative class
+- Data level
+  - Resampling - oversampling, undersampling
+- Algorithmic level
+  - Tuning the loss function
+    - Cost-sensitive learning
+    - Class-balanced loss
+    - Focal loss
 
-data augmentation
-  label-preserving transformations
-  data synthesis
+#### Data augmentation
+- Label-preserving transformations
+- Data synthesis
 
-Ch5
-Feature Engineering
-  Handle missing values
-  Identify the type of missing values
-    missing completely at random MCAR
-    missing at random MAR
-    missing not at random MNAR
-  Dealing with missing values
-    remove the rows
-    remove the columns
-    impute the missing values
-      use a default, ex. ""
-      use mean, median, mode
-  Feature Scaling
-    check for skewed distribution
-      apply log transformation
-    verify did not introduce data leakage by scaling
-  Encoding Categorical Features
-    check whether categories have changed over time
-    check whether categories are added
-      if so use the "hashing trick"
-  Feature Crossing combine features to create new features
-  Data leakage
-    check for the following:
-      do you understand how the data was generated?
-      if the data is time-correlated, was it split by time
-      scaling before splitting
-      remove duplicates before splitting
-      group leakage
-    detecting data leakage
-      measure the predictive power of each feature against a label
-      determine how many features are correlated with the label
-        do an ablation study
-      if new feature imroves the model then check that there is not data leakage
-  Measure feature importance
-    SHAP
-  Feature Generalization
-   Generally want to look at two things
-      feature coverage
-      distribution of feature values
-        is it in both your training and test sets
+### Ch5
+#### Feature Engineering
+- Handle missing values
+- Identify the type of missing values
+  - Missing completely at random (MCAR)
+  - Missing at random (MAR)
+  - Missing not at random (MNAR)
+- Dealing with missing values
+  - Remove the rows
+  - Remove the columns
+  - Impute the missing values
+    - Use a default, ex. ""
+    - Use mean, median, mode
+- Feature Scaling
+  - Check for skewed distribution
+    - Apply log transformation
+  - Verify did not introduce data leakage by scaling
+- Encoding Categorical Features
+  - Check whether categories have changed over time
+  - Check whether categories are added
+    - If so use the "hashing trick"
+- Feature Crossing: combine features to create new features
+- Data leakage
+  - Check for the following:
+    - Do you understand how the data was generated?
+    - If the data is time-correlated, was it split by time?
+    - Scaling before splitting
+    - Remove duplicates before splitting
+    - Group leakage
+  - Detecting data leakage
+    - Measure the predictive power of each feature against a label
+    - Determine how many features are correlated with the label
+      - Do an ablation study
+    - If new feature improves the model then check that there is not data leakage
+- Measure feature importance
+  - SHAP
+- Feature Generalization
+  - Generally want to look at two things:
+    - Feature coverage
+    - Distribution of feature values
+      - Is it in both your training and test sets?
 
 3. ML model development
 
@@ -132,16 +128,17 @@ Model Evaluation
   fraudulent transactions are abnormalities that you want to detect—and common algorithms for this problem are many, including k-nearest neighbors, isolation forest, clustering, and neural networks.
  it’s important to consider not only the model’s performance, measured by metrics such as accuracy, F1 score, and log loss, but also its other properties, such as how much data, compute, and time it needs to train, what’s its inference latency, and interpretability.
 
-6 tips for model selection
+#### 6 tips for model selection
 
-avoid the state-of-the-art trap
-start with the simplest model
-avoid human biases in selecting models
-evaluate good performance now vs good performance later
-  use learning curves to evaluate how your model might perform with more data
-evaluate trade-offs
-4. Deployment
+1. Avoid the state-of-the-art trap
+2. Start with the simplest model
+3. Avoid human biases in selecting models
+4. Evaluate good performance now vs good performance later
+   - Use learning curves to evaluate how your model might perform with more data
+5. Evaluate trade-offs
 
-5. Monitoring and continual learning
+### 4. Deployment
 
-6. Busness Analysis
+### 5. Monitoring and continual learning
+
+### 6. Business Analysis

@@ -1,3 +1,4 @@
+# AI! please format this markdown file so it diplays nicely
 Desiging Machine Learning Systems by Chip Huyen
 
 Checklist
@@ -126,6 +127,7 @@ Feature Engineering
 Ch6 Model Development and Offline Evaluation
 
 Model Evaluation
+
   common models for text classification include naive Bayes, logistic regression, recurrent neural networks, and transformer-based models such as BERT, GPT, and their variants.
   fraudulent transactions are abnormalities that you want to detect—and common algorithms for this problem are many, including k-nearest neighbors, isolation forest, clustering, and neural networks.
  it’s important to consider not only the model’s performance, measured by metrics such as accuracy, F1 score, and log loss, but also its other properties, such as how much data, compute, and time it needs to train, what’s its inference latency, and interpretability.

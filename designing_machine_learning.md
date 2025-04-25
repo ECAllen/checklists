@@ -2,7 +2,7 @@
 
 ## Checklist
 
-### Ch2
+### Ch2 Life cycle: Project Scoping
 
 - Understand the business objectives
 - Identify business metrics
@@ -31,7 +31,7 @@
 - Identify stakeholders
 - Estimate Resources
 
-### Ch3
+### Ch3 Life cycle: Data Engineering
 
 #### 2. Data Engineering
 
@@ -40,7 +40,7 @@
 - Pick the right data model for your needs: Relational model, document model, graph database etc.
 - Decide on structured vs. unstructured data
 
-### Ch4
+### Ch4 Life cycle: Data Engineering cjjjjjjjjjjjkollection
 
 #### Decide on sampling method
 
@@ -87,7 +87,7 @@ Common choices:
 - Label-preserving transformations
 - Data synthesis
 
-### Ch5
+### Ch5 Life cycle: Model Development
 
 #### Feature Engineering
 
@@ -131,17 +131,17 @@ Common choices:
     - Distribution of feature values
       - Is it in both your training and test sets?
 
-### Ch6
+### Ch6 Life cycle: Model Development
 
 ### Model Development and Offline Evaluation
 
 Model Evaluation
 
-common models for text classification include naive Bayes, logistic regression, recurrent neural networks, and transformer-based models such as BERT, GPT, and their variants.
+- common models for text classification include naive Bayes, logistic regression, recurrent neural networks, and transformer-based models such as BERT, GPT, and their variants.
 
-fraudulent transactions are abnormalities that you want to detect—and common algorithms for this problem are many, including k-nearest neighbors, isolation forest, clustering, and neural networks.
+- fraudulent transactions are abnormalities that you want to detect—and common algorithms for this problem are many, including k-nearest neighbors, isolation forest, clustering, and neural networks.
 
-it’s important to consider not only the model’s performance, measured by metrics such as accuracy, F1 score, and log loss, but also its other properties, such as how much data, compute, and time it needs to train, what’s its inference latency, and interpretability.
+- it’s important to consider not only the model’s performance, measured by metrics such as accuracy, F1 score, and log loss, but also its other properties, such as how much data, compute, and time it needs to train, what’s its inference latency, and interpretability.
 
 #### 6 tips for model selection
 
@@ -152,7 +152,7 @@ it’s important to consider not only the model’s performance, measured by met
    - Use learning curves to evaluate how your model might perform with more data
 5. Evaluate trade-offs
 
-### Ch7
+### Ch7 Life cycle: Deployment
 
 ### Deployment
 

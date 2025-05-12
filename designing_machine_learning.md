@@ -241,19 +241,64 @@ Common compression techniques:
 1. low-rank factiorization
 
 - compact convolutional filters - over-parameterized convolutional filters are replaces with compact blocks
-
 - only applies to convolutional filters
-
 - requires deep architectural knowledge
 
 2. knowledge distillation - ex. DistilBERT
 
-- student trained from teacher
+- student (small model) trained from teacher (large model)
+- deploy the small model
 
 3. pruning
 
+2 meanings:
+1) remove nodes from a nn surgery
+2) set parameters to zero
+
 4. quantization
 
-### Monitoring and continual learning
+- fewer bits to represent parameters
 
-### Business Analysis
+### Ch8 Data Distribution Shifts and Monitoring
+
+Operational metrics/Software system failures
+- dependency failures
+- deployment failures
+- hardware failuers
+- downtime/crashes
+
+ML performance pitfalls
+- watch for silent failures ex. mistranslation
+- diff production data and training data
+  - real world data distributions are hard to capture
+- edge cases: cases so extreme they cause catastrophic failure
+
+
+- degenerate feedback loops: when model outputs are used to make future inputs
+  - popularity diversity detection for recommender systems
+    - think filter bubble 
+    - likelihood of recommending popular items
+    - aggregate diversity 
+    - average coverage of long tail items
+- correcting degenerate feedback loops
+  - introduce randomization in predections
+  - positional features
+
+Data Distribution Shifts
+- Covariant Shift - independent variable that can influence the outcome of a stastical trial but is not a direct interest ex. housing price affected by sq footage
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

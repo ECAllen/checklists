@@ -1,23 +1,32 @@
 
 General
 
+- Code conventions - pep8
 - Formatting ruff format
-- Linting ruff check
-- Directory structure uv
+- Linting - ruff check
+- Directory structure - uv
 - Comments/Documentation
-- Dependency management uv, poetry, requirements.txt etc...
+- Dependency management - uv, poetry, requirements.txt etc...
 - Error handling
-- Test coverage pytest
+- Test coverage - pytest
 - Using version control and releases git, pyproject.toml
-
-Optional (maybe)
-
 - Typing
+- Logging
+
+Advanced Features
+
+- Generators
+- List comprehension
+- Containers and collections - dequeue
 
 Code quality
 
 - Handling edge cases
 - handling input
+
+Testing
+
+- pytest
 
 Tools
 
@@ -27,6 +36,11 @@ Tools
 - mypy
 
 API's
+
+- API standards (probably OpenAPI)
+- Implementing backoff with jitter
+- Handle exceptions
+- Proper http return codes
 
 Packages
 
